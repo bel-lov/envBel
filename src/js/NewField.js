@@ -46,19 +46,12 @@ export default class NewField {
 
         document.addEventListener('click', (event) => {
             const eventTarget = event.target;
-            console.log(eventTarget)
-
             if (eventTarget.closest('img')) {
-                // console.log('Попал')
                 wingClick++;
                 hitGoblin--;
-                console.log(wingClick)
-                points.innerText = `Баллов ${wingClick}`;
+                points.innerText = `Набраноаллов ${wingClick}`;
                 cellList.item(lastIndex).innerHTML = ' ';
             }
-            // else {
-            //     console.log('Промах')
-            // }
         });
     }
 }

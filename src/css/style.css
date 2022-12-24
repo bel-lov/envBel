@@ -8,7 +8,7 @@ body {
 
 .board {
     width: 600px;
-    margin: 100px auto;
+    margin: 50px auto;
     display: flex;
     flex-wrap: wrap;
     cursor: url('../img/hammer.png') 30 40, pointer;
@@ -20,4 +20,19 @@ body {
     margin: 5px;
     background-color: #067421;
     text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#points,
+#godlins {
+    display: block;
+    font-size: 24px;
+    color: aliceblue;
 }
