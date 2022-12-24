@@ -1,7 +1,6 @@
-# Webpack5
+# Домашнее задание к занятию "3.Обработка событий"
 
-[Руководство по настройке Webpack](https://webpack.js.org/guides/)
-[Руководство по настройке GitHub Actions](https://docs.github.com/en/actions/quickstart)
+[Руководство по настройке Webpack](https://github.com/netology-code/ahj-homeworks/tree/video/events)
 
 [![Build Status](https://ci.appveyor.com/api/projects/status/github/bel-lov/envBel)](https://ci.appveyor.com/api/projects/status/github/bel-lov/envBel)
 
