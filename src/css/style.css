@@ -3,9 +3,7 @@
 }
 
 body {
-    /* cursor: url('https://e7.pngegg.com/pngimages/306/413/png-clipart-hammer-hand-tool-mallet-hammer-angle-technic.png'), auto; */
     background-color: #1D1E22;
-    cursor: none;
 }
 
 .board {
@@ -13,7 +11,7 @@ body {
     margin: 100px auto;
     display: flex;
     flex-wrap: wrap;
-
+    cursor: url('../img/hammer.png') 30 40, pointer;
 }
 
 .cell {
@@ -22,18 +20,4 @@ body {
     margin: 5px;
     background-color: #067421;
     text-align: center;
-}
-
-.rounded {
-    width: 30px;
-    height: 30px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-}
-
-.pointed {
-    width: 7px;
-    height: 7px;
-    background-color: white;
-    border-radius: 50%;
 }

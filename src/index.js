@@ -1,4 +1,4 @@
-import './css/style.css';
-import './js/app';
-import './img/goblin.png';
-import './js/cursor';
+import "./css/style.css";
+import "./js/app";
+import "./img/goblin.png";
+import "./js/NewField";
