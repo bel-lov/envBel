@@ -1,57 +1,57 @@
-const points = document.getElementById('points');
-const godlins = document.getElementById('godlins');
+const points = document.getElementById("points");
+const godlins = document.getElementById("godlins");
 
 export default class NewField {
-    constructor(board) {
-        this.board = board;
-    }
+  constructor(board) {
+    this.board = board;
+  }
 
-    start() {
-        const plaingField = document.querySelector('.board');
-        for (let i = 0; i < this.board ** 2; i += 1) {
-            const cell = document.createElement('div');
-            cell.classList.add('cell');
-            plaingField.prepend(cell);
+  start() {
+    const plaingField = document.querySelector(".board");
+    for (let i = 0; i < this.board ** 2; i += 1) {
+      const cell = document.createElement("div");
+      cell.classList.add("cell");
+      plaingField.prepend(cell);
+    }
+    this.randomGoblin();
+  }
+
+  randomGoblin() {
+    let hitGoblin = -1;
+    let wingClick = 0;
+    const cellList = document.querySelectorAll(".cell");
+    let lastIndex = 0;
+    const max = this.board ** 2 - 1;
+    const interval = setInterval(() => {
+      let index = Math.floor(Math.random() * (this.board + 1));
+      if (index === lastIndex) {
+        index += 1;
+        if (index >= max) {
+          index = 0;
         }
-        this.randomGoblin();
-    }
+      }
+      cellList[lastIndex].innerHTML = "";
+      cellList[index].innerHTML = '<img src="goblin.png">';
+      // cellList[index].classList.add('img');
+      lastIndex = index;
 
-    randomGoblin() {
-        let hitGoblin = -1;
-        let wingClick = 0;
-        const cellList = document.querySelectorAll('.cell');
-        let lastIndex = 0;
-        const max = this.board ** 2 - 1;
-        const interval = setInterval(() => {
-            let index = Math.floor(Math.random() * (this.board + 1));
-            if (index === lastIndex) {
-                index += 1;
-                if (index >= max) {
-                    index = 0;
-                }
-            }
-            cellList[lastIndex].innerHTML = '';
-            cellList[index].innerHTML = '<img src="goblin.png">';
-            // cellList[index].classList.add('img');
-            lastIndex = index;
+      hitGoblin++;
+      godlins.innerText = `Пропущено гоблинов ${hitGoblin}`;
+      if (hitGoblin === 5) {
+        alert(`Игра окончена, пропущено ${hitGoblin} гоблинов `);
+        clearInterval(interval);
+        cellList.item(lastIndex).innerHTML = " ";
+      }
+    }, 1000);
 
-            hitGoblin++;
-            godlins.innerText = `Пропущено гоблинов ${hitGoblin}`;
-            if (hitGoblin === 5) {
-                alert(`Игра окончена, пропущено ${hitGoblin} гоблинов `);
-                clearInterval(interval);
-                cellList.item(lastIndex).innerHTML = ' ';
-            }
-        }, 1000);
-
-        document.addEventListener('click', (event) => {
-            const eventTarget = event.target;
-            if (eventTarget.closest('img')) {
-                wingClick++;
-                hitGoblin--;
-                points.innerText = `Набрано баллов ${wingClick}`;
-                cellList.item(lastIndex).innerHTML = ' ';
-            }
-        });
-    }
+    document.addEventListener("click", (event) => {
+      const eventTarget = event.target;
+      if (eventTarget.closest("img")) {
+        wingClick++;
+        hitGoblin--;
+        points.innerText = `Набрано баллов ${wingClick}`;
+        cellList.item(lastIndex).innerHTML = " ";
+      }
+    });
+  }
 }

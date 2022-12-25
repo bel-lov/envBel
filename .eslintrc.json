@@ -1,12 +1,18 @@
 {
-  "plugins": ["prettier"],
-  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "plugins": [
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
   "env": {
     "es6": true,
     "browser": true,
     "jest/globals": true
   },
   "parserOptions": {
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
   "rules": {
@@ -14,10 +20,18 @@
   },
   "overrides": [
     {
-      "files": ["**/*.test.js"],
-      "plugins": ["jest"],
-      "extends": ["plugin:jest/recommended"],
-      "rules": { "jest/prefer-expect-assertions": "off" }
+      "files": [
+        "**/*.test.js"
+      ],
+      "plugins": [
+        "jest"
+      ],
+      "extends": [
+        "plugin:jest/recommended"
+      ],
+      "rules": {
+        "jest/prefer-expect-assertions": "off"
+      }
     }
   ]
 }
