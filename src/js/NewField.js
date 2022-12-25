@@ -49,7 +49,7 @@ export default class NewField {
             if (eventTarget.closest('img')) {
                 wingClick++;
                 hitGoblin--;
-                points.innerText = `Набраноаллов ${wingClick}`;
+                points.innerText = `Набрано баллов ${wingClick}`;
                 cellList.item(lastIndex).innerHTML = ' ';
             }
         });
