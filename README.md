@@ -2,7 +2,9 @@
 
 [Ссылка на домашнее задание](https://github.com/netology-code/ahj-homeworks/tree/video/events)
 
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/bel-lov/envBel)](https://ci.appveyor.com/api/projects/status/github/bel-lov/envBel)
+<!-- [![Build Status](https://ci.appveyor.com/api/projects/status/github/bel-lov/envBel)](https://ci.appveyor.com/api/projects/status/github/bel-lov/envBel) -->
+
+[![Build status](https://ci.appveyor.com/api/projects/status/g6bb55s7392bpre0?svg=true)](https://ci.appveyor.com/project/bel-lov/envbel)
 
 ![CI](https://github.com/bel-lov/envBel/actions/workflows/web.yml/badge.svg)
 
